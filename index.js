@@ -11,7 +11,7 @@ app.get('/api/pasteee', async (req, res) => {
     }
 
     const pasteId = url.replace('https://paste.ee/p/', '');
-    const rawUrl = `https://paste.ee/r/`;
+    const rawUrl = `https://paste.ee/r/${pasteId}`;
 
     try {
         const response = await axios.get(rawUrl);
